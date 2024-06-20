@@ -1,9 +1,9 @@
 import { Sequelize } from "sequelize";
 
-const Databases = new Sequelize('doacao', 'informatica', 'Obrasocial@544', {
-    host: '177.172.16.94',
-    dialect: 'mysql',
-    port: 3306,
+const Databases = new Sequelize(NAME_DATABASE, USER_DATABASE, PASSWORD_DATABASE, {
+    host: HOST_DATABASE,
+    dialect: TIPE_DATABASE,
+    port: PORT_DATABASE,
 });
 /*
 (async()=>{
