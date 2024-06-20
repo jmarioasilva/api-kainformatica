@@ -6,6 +6,6 @@
             "use": "@vercel/node"
         }
     ],
-    "router": "(/.*)",
+    "routers": "(/.*)",
     "dest": "index.js"
 }
