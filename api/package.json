@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "git": "^0.1.5",
     "mysql2": "^3.10.0",
@@ -15,6 +16,5 @@
   "keywords": [],
   "author": "Mario Alexandre",
   "license": "ISC",
-  "devDependencies": {},
   "description": ""
 }
