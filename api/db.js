@@ -7,15 +7,5 @@ const Databases = new Sequelize(process.env.NAME_DATABASE, process.env.USER_DATA
     port: 3306
 });
 
-/*
-(async()=>{
-    try {
-        await Databases.authenticate();
-        console.log('Connection has been established successfully.');
-      } catch (error) {
-        console.error('Unable to connect to the database:', error);
-      }
-})();
-*/
 
 export default Databases;
