@@ -39,4 +39,4 @@ app.post('/produto', async(req, res)=>{
     res.status(201).json(req.body);
 });   
 
-app.listen(3000)
+app.listen(3030)
