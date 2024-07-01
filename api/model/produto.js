@@ -2,6 +2,7 @@ import {Sequelize, DataTypes} from 'sequelize';
 import databases from "../db.js";
 import tipo_item from './tipo_items.js';
 import FOREIGNKEYS from 'sequelize/lib/query-types';
+import doador from './doador.js';
 
 const produto = databases.define('produto',{
     ka_idProd: {
@@ -26,10 +27,18 @@ const produto = databases.define('produto',{
        type: DataTypes.INTEGER,
         allowNull: false,
     },
+    ka_fkidDoador:{
+        type: DataTypes.INTEGER,
+        allowNull: false
+    }
 });
 produto.belongsToMany(tipo_item,{
     through: 'ka_fkidTipoItem',
-    foreignKey: 'ka_idItem',
+    foreignKey: 'ka_idItem'
+});
+produto.belongsToMany(doador,{
+    through: 'ka_fkidDoador',
+    foreignKey: 'ka_idDoador'
 });
 
 export default produto;
