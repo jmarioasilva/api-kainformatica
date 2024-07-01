@@ -7,7 +7,6 @@ import 'dotenv/config'
 const app = express();
 app.use(express.json());
 
-
 app.get('/doador', async(req,res)=>{
 
     res.send( await doadores.findAll());
@@ -40,5 +39,4 @@ app.post('/produto', async(req, res)=>{
     res.status(201).json(req.body);
 });   
 
-
-app.listen(3030)
+app.listen(3000)
