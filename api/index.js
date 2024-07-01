@@ -7,12 +7,12 @@ import 'dotenv/config'
 const app = express();
 app.use(express.json());
 
-app.get('/doador', async(req,res)=>{
+app.get("/doador", async(req,res)=>{
 
     res.send( await doadores.findAll());
    
 });
-app.post('/doador', async(req,res)=>{
+app.post("/doador", async(req,res)=>{
    await doadores.create({
       ka_nomeDoador: req.body.ka_nomeDoador
    });
@@ -20,14 +20,14 @@ app.post('/doador', async(req,res)=>{
    res.status(201).json(req.body);
 });
 
-app.get('/produto', async(req, res)=>{
+app.get("/produto", async(req, res)=>{
   res.send( await produtos.findAll());
 });
-app.get('/tipoitems', async(req, res)=>{
+app.get("/tipoitems", async(req, res)=>{
   res.send( await tipo_item.findAll());
 });
 
-app.post('/produto', async(req, res)=>{
+app.post("/produto", async(req, res)=>{
     await produtos.create({
       ka_nomeProd: req.body.ka_nomeProd,
       ka_quantProd: req.body.ka_quantProd,
