@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(cors({
   origin:"http://localhost:8081/",
-}))
+}));
 
 app.get("/doador", async(req,res)=>{
 
