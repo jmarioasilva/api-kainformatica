@@ -5,9 +5,6 @@ import tipo_item from './model/tipo_items.js'
 import 'dotenv/config'
 
 const app = express();
-app.use(cors({
-  origin:"http://localhost:8081/",
-}));
 app.use(express.json());
 
 app.get("/doador", async(req,res)=>{
