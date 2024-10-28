@@ -3,7 +3,7 @@ import doadores from './model/doador.js'
 import produtos from './model/produto.js'
 import tipo_item from './model/tipo_items.js'
 import 'dotenv/config'
-import 'cors' from 'cors'
+//import 'cors' from 'cors'
 
 const app = express();
 app.use(express.json());
