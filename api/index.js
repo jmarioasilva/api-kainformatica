@@ -8,7 +8,7 @@ import 'cors' from 'cors'
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:8081'
+    origin: '*'
 }));
 
 app.get("/doador", async(req,res)=>{
